@@ -1,0 +1,35 @@
+<style>
+label, input, textarea {
+  display: block;
+  width: 100%;
+}
+
+input, textarea {
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 300px;
+}
+textarea {
+  resize: none;
+}
+</style>
+
+<form action="/racecars/<%= @racecar.id %>" method="POST">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" value="<%= @racecar.name %>" />
+  <label for="horsepower">Horsepower</label>
+  <input id="horsepower" type="number" name="horsepower" value="<%= @racecar.horsepower %>" />
+  <label for="bio">Bio</label>
+  <textarea id="bio" name="bio"><%= @racecar.bio %></textarea>
+
+  <input type="submit" value="Edit car" />
+
+  <input type="hidden" name="_method" value="PATCH" />
+</form>
+
+<form action="/racecars/<%= @racecar.id %>" method="POST">
+  <input type="submit" value="Delete car" />
+  <input type="hidden" name="_method" value="DELETE" />
+</form>

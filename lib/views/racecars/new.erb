@@ -1,0 +1,28 @@
+<style>
+label, input, textarea {
+  display: block;
+  width: 100%;
+}
+
+input, textarea {
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 300px;
+}
+textarea {
+  resize: none;
+}
+</style>
+
+<form action="/racecars" method="POST">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" />
+  <label for="horsepower">Horsepower</label>
+  <input id="horsepower" type="number" name="horsepower" />
+  <label for="bio">Bio</label>
+  <textarea id="bio" name="bio"></textarea>
+
+  <input type="submit" value="Add car" />
+</form>

@@ -1,5 +1,5 @@
 <ul>
   <% @racecars.each do |racecar| %>
-    <li><a href="/racecars/<%= racecar.id %>"><%= racecar.name %></a> - <%= racecar.horsepower %></li>
+    <li><a href="/racecars/<%= racecar.id %>"><%= racecar.name %></a> - <%= racecar.horsepower %> <a href="/racecars/<%= racecar.id %>/edit">Edit</a><a href="/racecars/<%= racecar.id %>/delete">Delete</a></li>
   <% end %>
 </ul>
